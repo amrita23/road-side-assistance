@@ -1,0 +1,28 @@
+@import "../../assets/sass/_mixin";
+@import "../../assets/sass/_variables";
+
+.invoice-wraper {
+  margin-top: 22px;
+  .invoice-id {
+    max-width: 40%;
+    margin: 0px auto 30px auto;
+    @include mobile-small {
+      max-width: 100%;
+    }
+  }
+  
+}
+
+.button-area {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  .btn {
+    text-transform: uppercase;
+    @include mobile-small {
+      margin-bottom: 16px;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}

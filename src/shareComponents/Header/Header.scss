@@ -1,0 +1,139 @@
+@import "../../assets/sass/_mixin";
+@import "../../assets/sass/_variables";
+
+.header-menu {
+  position: fixed;
+  width: 100%;
+  height: 58px;
+  background-color: $text-color;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  @include mobile-small {
+    height: 48px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 53px;
+      @include mobile-small {
+        width: 38px;
+      }
+    }
+    figcaption {
+      color: $theme-red;
+      @include font-size(19);
+      font-weight: 600;
+      margin-left: 10px;
+      @include mobile-small {
+        margin-left: 8px;
+        @include font-size(15);
+      }
+    }
+  }
+  .header-right-nav {
+    .dropdown {
+      a {
+        color: #fff;
+      }
+      .dropdown-item {
+        color: #212529;
+        padding: 8px 13px;
+        &:hover {
+          background-color: $theme-red;
+          color: #fff;
+        }
+      }
+      .dropdown-menu {
+        padding: 0;
+        margin: 9px 15px;
+        border-color: $theme-red;
+      }
+    }
+    .nav-link {
+      i {
+        color: $theme-red;
+        @include font-size(19);
+      }
+    }
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  .header-right-bars {
+    display: none;
+    color: #fff;
+    position: relative;
+    @include font-size(19);
+    justify-content: flex-end;
+    @include mobile-small {
+      display: flex;
+    }
+    .down-nav {
+      display: none;
+      position: absolute;
+      top: 32px;
+      right: -20px;
+      width: 250px;
+
+      background-color: #212529;
+      &.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .sidemenu {
+        a {
+          padding: 10px 45px;
+          @include font-size(15);
+          color: #fff;
+          span {
+            margin-left: 8px;
+          }
+          &:hover {
+            background-color: $theme-red;
+            color: #fff;
+          }
+          &.active {
+            background-color: $theme-red;
+            color: #fff;
+          }
+        }
+      }
+      .right-wrapper {
+        .nav{
+          justify-content: space-around;
+        }
+        .dropdown {
+          a {
+            color: #fff;
+            @include font-size(17);
+          }
+          .dropdown-item {
+            color: #212529;
+            padding: 8px 13px;
+            &:hover {
+              background-color: $theme-red;
+              color: #fff;
+            }
+          }
+          .dropdown-menu {
+            padding: 0;
+            margin: 9px 15px;
+            border-color: $theme-red;
+          }
+        }
+        .nav-link {
+          i {
+            color: $theme-red;
+            @include font-size(17);
+          }
+        }
+      }
+    }
+  }
+}

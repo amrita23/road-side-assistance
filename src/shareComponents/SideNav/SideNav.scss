@@ -1,0 +1,74 @@
+@import "../../assets/sass/_mixin";
+@import "../../assets/sass/_variables";
+
+.sidebar-menu {
+  position: fixed;
+  top: 58px;
+  width: 80px;
+  height: 100vh;
+  background-color: $text-color;
+
+  .sideBarToggle {
+    text-align: right;
+    padding: 10px 14px;
+    i {
+      color: #fff;
+      @include font-size(31);
+    }
+  }
+
+  a {
+    padding: 15px 29px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+
+    i {
+      @include font-size(23);
+    }
+    span {
+      display: none;
+    }
+    &:hover {
+      background-color: $theme-red;
+      color: #fff;
+      text-decoration: none;
+    }
+    &.active {
+      background-color: $theme-red;
+      color: #fff;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+  @include mobile-small {
+    display: none;
+  }
+}
+
+.expand {
+  width: 240px !important;
+  a {
+    i {
+      @include font-size(20);
+    }
+    span {
+      display: block;
+      @include font-size(15);
+      padding-left: 10px;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+  @include mobile-small {
+    display: none;
+  }
+}
+
+
+
+

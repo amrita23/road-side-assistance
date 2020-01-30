@@ -1,0 +1,39 @@
+@import "../../assets/sass/_mixin";
+@import "../../assets/sass/_variables";
+.user-list {
+  margin-top:22px;
+  a {
+    font-weight: 600;
+  }
+  thead {
+    background-color: #222222;
+    color: #fff;
+    th {
+      @include font-size(15);
+      font-weight: 200;
+    }
+  }
+
+  .search-area {
+    display: flex;
+    input {
+      width: 40%;
+      @include mobile-small {
+        width: 100%;
+      }
+    }
+    .btn {
+      margin-left: 13px;
+      height: 38px;
+      @include mobile-small {
+        margin-left: 0px;
+        margin-top: 13px;
+      }
+    }
+    
+    
+    @include mobile-small {
+      flex-direction: column;
+    }
+  }
+}

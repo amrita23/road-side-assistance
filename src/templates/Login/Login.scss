@@ -1,0 +1,48 @@
+@import "../../assets/sass/variables";
+@import "../../assets/sass/_mixin";
+
+.login-container {
+  background: url("../../assets/img/login-bg.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-area {
+    width: 390px;
+    @include mobile-small {
+      width: 90vw;
+    }
+  }
+
+  img {
+    width: 100px;
+    @include mobile-small {
+      width: 85px;
+    }
+  }
+
+  figcaption {
+    color: $theme-white;
+    @include font-size(26);
+    font-weight: 400;
+    margin-bottom: 30px;
+    @include mobile-small {
+        @include font-size(22);
+    }
+  }
+
+  .login-form-area {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 49px 15px 20px 15px;
+    @include border-radius(7px);
+  }
+  .forgetPass {
+    margin-top: 30px;
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../assets/sass/_mixin";
+@import "../../assets/sass/_variables";
+
+.all-orders-list {
+  margin-top: 22px;
+  a {
+    font-weight: 600;
+    @include mobile-small {
+      margin-top: 10px;
+    }
+  }
+  thead {
+    background-color: #222222;
+    color: #fff;
+    th {
+      @include font-size(15);
+      font-weight: 200;
+    }
+  }
+
+  tbody {
+    td {
+      @include font-size(14);
+    }
+  }
+
+  .search-area {
+    display: flex;
+    input {
+      width: 40%;
+      @include mobile-small {
+        width: 100%;
+      }
+    }
+    .btn {
+      margin-left: 13px;
+      height: 38px;
+      @include mobile-small {
+        margin-top: 13px;
+        margin-left: 0px;
+      }
+    }
+    @include mobile-small {
+      flex-direction: column;
+    }
+  }
+}
+
+td {
+  .btn {
+    width: 125px;
+    @include mobile-small{
+      width: 95px;
+    }
+    &.btn-danger {
+      text-transform: uppercase;
+      height: 34px !important;
+      border-radius: 6px;
+      background-color: $theme-red;
+      font-weight: 700;
+    }
+  }
+  .pretty.p-icon .state label {
+    color: #000;
+  }
+  
+}
